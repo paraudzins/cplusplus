@@ -12,6 +12,8 @@ int main()
         std::cout << i << "\t";
     }
 
+    std::cout << "\n  \n";
+
     // Taimeris no 10 līdz 1
     for (int i = 10; i > 0; i--)
     {
