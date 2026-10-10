@@ -1,11 +1,9 @@
 #include <iostream>
-#include <string>
 
 int main()
 {
-    
-    char skaitlis;
-    char skaitlis2;
+    double skaitlis;
+    double skaitlis2;
     char zime;
     
     std::cout << "Ievadi skaitli: ";
@@ -14,12 +12,33 @@ int main()
     std::cout << "Ievadi otru skaitli: ";
     std::cin >> skaitlis2;
     
-    std::cout << "Ievadi zimi: ";
+    std::cout << "Ievadi zimi (+, -, *, /): ";
     std::cin >> zime;
 
- 
-
     std::cout << "\nRezultats: ";
- 
-    return 0;
+
+    switch (zime) {
+        case '+':
+            std::cout << skaitlis + skaitlis2;
+            break;
+        case '-':
+            std::cout << skaitlis - skaitlis2;
+            break;
+        case '*':
+            std::cout << skaitlis * skaitlis2;
+            break;
+        case '/':
+            if (skaitlis2 != 0) {
+                std::cout << skaitlis / skaitlis2;
+            } else {
+                std::cout << "Kluda";
+            }
+            break;
+        default:
+            std::cout << "Nedederiga darbibas zime";
+            break;
+    }
+
+    std::cout << std::endl;
+    return 0;     
 }
