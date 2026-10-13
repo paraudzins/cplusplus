@@ -20,9 +20,16 @@ int main()
     {
         std::cout << "\nParole nepienemta";  
     }
-        
     
+   if (parole
+    {   
+       
+    }    
+    else
+    {
+        
+    }
+    
+
     return 0;
 }
-
-
