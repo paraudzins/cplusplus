@@ -6,6 +6,8 @@
 
 int input;
 int kuga_dzivibas = 100;
+int nauda = 100;
+int apkalpe = 100;
 
 void asteroidi(){
     
@@ -25,14 +27,15 @@ void asteroidi(){
 
 else if (input == 2) {
     srand(time(0));
-    int bojajums = rand() % 5 + 1;
+    int bojajums = rand() % 10 + 1;
 
     kuga_dzivibas -= bojajums;
+    nauda += bojajums;
 
-    std::cout << "After taking damage: " << kuga_dzivibas << "\n";  
+    std::cout << "After taking damage: " << kuga_dzivibas << "\n"; 
+    std::cout << "Nauda pec cinas: " << nauda << "\n";
 
 }
-
 }
 
 void tirgotajs(){
@@ -63,11 +66,7 @@ void pirati(){
 
 
 int main() {
-    
-//int kuga_dzivibas = 100;
-//int nauda = 100;
-//int apkalpe = 100;
-    
+      
     srand(time(0));
     int skaitlis = rand() % 10 + 1;
 
