@@ -3,16 +3,29 @@
 #include <ctime>
 
 
-//bool skaitlis = 2;
+
 int input;
+int kuga_dzivibas = 100;
 
 void asteroidi(){
     
-std::cout << "Ko darisi? 1 - begt, 2 - cinities, " << "\n";       
-std::cin >> input; 
+    std::cout << "Ko darisi? 1 - begt, 2 - cinities, " << "\n";       
+    std::cin >> input;
 
-if (input ==1){
-std::cout << "Tu aizbegi" << "\n";    
+    if (input ==1){
+    
+    srand(time(0));
+    int bojajums = rand() % 5 + 1;
+
+    kuga_dzivibas -= bojajums;
+
+    std::cout << "After taking damage: " << kuga_dzivibas << "\n";   
+
+/*void takeDamage(int &health, int amount) {
+    health -= amount;
+    std::cout << "After taking damage: " << health << "\n";
+}
+*/
 
 }
 
@@ -52,9 +65,9 @@ std::cin >> input;
 
 int main() {
     
-int kuga_dzivibas = 100;
-int nauda = 100;
-int apkalpe = 100;
+//int kuga_dzivibas = 100;
+//int nauda = 100;
+//int apkalpe = 100;
     
 srand(time(0));
 int skaitlis = rand() % 10 + 1;
@@ -72,7 +85,7 @@ std::cout << skaitlis << "\n";
    81-90   - tirgotājs,
    91-100   - Asteroīdu lauks,
 */
-
+while (kuga_dzivibas > 0){
 if (skaitlis <= 10) {
     asteroidi();
 }    
@@ -104,7 +117,7 @@ if (skaitlis <= 10) {
     asteroidi();
 
 }
-
+}
 
     return 0;
 }
