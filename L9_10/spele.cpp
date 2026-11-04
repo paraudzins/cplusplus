@@ -9,13 +9,17 @@ int input;
 void asteroidi(){
     
 std::cout << "Ko darisi? 1 - begt, 2 - cinities, " << "\n";       
-std::cin >> input;   
-    
- /* 1-10 - 1 - Bēgt,
-   11-20  2 - Ieslēgt,
-   21-30  3 - Cīnīties,
+std::cin >> input; 
 
-*/   
+if (input ==1){
+std::cout << "Tu aizbegi" << "\n";    
+
+}
+
+else if (input == 2) {
+std::cout << "Tu uzvareji" << "\n";   
+
+}
 
 }
 
@@ -48,8 +52,12 @@ std::cin >> input;
 
 int main() {
     
+int kuga_dzivibas = 100;
+int nauda = 100;
+int apkalpe = 100;
+    
 srand(time(0));
-int skaitlis = rand() % 100 + 1;
+int skaitlis = rand() % 10 + 1;
 
 std::cout << skaitlis << "\n";
 
