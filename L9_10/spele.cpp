@@ -7,9 +7,72 @@
 int input;
 int kuga_dzivibas = 100;
 int nauda = 100;
-int apkalpe = 100;
+int degviela = 100;
 
 void asteroidi(){
+    
+    std::cout << "Tuvojies asteroidu laukam! Ko darisi? 1 - begt, 2 - cinities, " << "\n";       
+    std::cin >> input;
+
+    if (input ==1){
+    
+    srand(time(0));
+    int bojajums = rand() % 5 + 1;
+
+    kuga_dzivibas -= bojajums;
+
+    std::cout << "After taking damage: " << kuga_dzivibas << "\n";   
+
+}
+
+else if (input == 2) {
+    
+    srand(time(0));
+    int bojajums = rand() % 10 + 1;
+
+    kuga_dzivibas -= bojajums;
+    nauda += bojajums;
+
+    std::cout << "After taking damage: " << kuga_dzivibas << "\n"; 
+    std::cout << "Nauda pec cinas: " << nauda << "\n";
+
+}
+}
+
+void tirgotajs(){
+    
+    std::cout << "Satiki tirgotāju Ko darisi? 1 - pardosi degvielu, 2 - pirkt degvielu, " << "\n";       
+    std::cin >> input;
+
+    if (input ==1){
+    
+    srand(time(0));
+    int nopelnitais = rand() % 20 + 1;
+
+    nauda += nopelnitais;
+
+    std::cout << "Nauda pēc tirgosanas: " << nauda << "\n";   
+
+}
+
+else if (input == 2) {
+    
+    srand(time(0));
+    int zaudejumi = rand() % 10 + 1;
+    srand(time(0));
+    int degvielas_izmainas = rand() % 5 + 1;
+
+    nauda -= zaudejumi;
+    degviela += degvielas_izmainas;
+ 
+    std::cout << "Nauda pec pirksanas: " << nauda << "\n";
+    std::cout << "Degviela pec pirksanas: " << degviela << "\n";
+
+}
+}
+
+/*
+void pirati(){
     
     std::cout << "Ko darisi? 1 - begt, 2 - cinities, " << "\n";       
     std::cin >> input;
@@ -26,6 +89,7 @@ void asteroidi(){
 }
 
 else if (input == 2) {
+    
     srand(time(0));
     int bojajums = rand() % 10 + 1;
 
@@ -35,42 +99,16 @@ else if (input == 2) {
     std::cout << "After taking damage: " << kuga_dzivibas << "\n"; 
     std::cout << "Nauda pec cinas: " << nauda << "\n";
 
+} 
 }
-}
-
-void tirgotajs(){
-    
-    std::cout << "Ko darisi? 1 - begt, 2 - cinities, " << "\n";       
-    std::cin >> input;   
-    
- /* 1-10 - 1 - Bēgt,
-   11-20  2 - Ieslēgt,
-   21-30  3 - Cīnīties,
-
-*/   
-
-}
-
-void pirati(){
-    
-    std::cout << "Ko darisi? 1 - begt, 2 - cinities, " << "\n";       
-    std::cin >> input;   
-    
- /* 1-10 - 1 - Bēgt,
-   11-20  2 - Ieslēgt,
-   21-30  3 - Cīnīties,
-
-*/   
-
-}
-
+*/
 
 int main() {
       
-    srand(time(0));
-    int skaitlis = rand() % 10 + 1;
+    //srand(time(0));
+    //int skaitlis = rand() % 30 + 1;
 
-    std::cout << skaitlis << "\n";
+    //std::cout << skaitlis << "\n";
 
 /* 1-10 -  - Asteroīdu lauks,
    11-20   - Kosmosa pirāti,
@@ -84,6 +122,11 @@ int main() {
    91-100   - Asteroīdu lauks,
 */
     while (kuga_dzivibas > 0){
+        
+    srand(time(0));
+    int skaitlis = rand() % 30 + 1; 
+    std::cout << skaitlis << "\n";
+        
         if (skaitlis <= 10) {
         asteroidi();
 }    
