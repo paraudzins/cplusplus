@@ -130,27 +130,27 @@ int main() {
         if (skaitlis <= 10) {
         asteroidi();
 }    
-        else if (skaitlis <= 20 && skaitlis > 10) {  
-        pirati();
-}   
+        //else if (skaitlis <= 20 && skaitlis > 10) {  
+        //pirati();
+//}   
         else if (skaitlis <= 30 && skaitlis > 20) {
         tirgotajs();
 }  
         else if (skaitlis <= 40 && skaitlis > 30) {
         tirgotajs();
 }    
-        else if (skaitlis <= 50 && skaitlis > 40) {
-        pirati();
-}   
+        //else if (skaitlis <= 50 && skaitlis > 40) {
+        //pirati();
+//}   
         else if (skaitlis <= 60 && skaitlis > 50) {
         tirgotajs();
 }    
         else if (skaitlis <= 70 && skaitlis > 60) {
         asteroidi();
 }   
-        else if (skaitlis <= 80 && skaitlis > 70) {
-        pirati();
-}  
+        //else if (skaitlis <= 80 && skaitlis > 70) {
+        //pirati();
+//}  
         else if (skaitlis <= 90 && skaitlis > 80) {
         tirgotajs();
 }  
