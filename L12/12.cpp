@@ -42,7 +42,7 @@ int main() {
       g1.raditInfo();
       
       std::cout << std::boolalpha;
-      std::cout << "\n" << g1.irBieza();
+      std::cout << "\n" << "Ir bieza: "<< g1.irBieza();
       
 
 
