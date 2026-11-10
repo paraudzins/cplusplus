@@ -22,17 +22,28 @@
        }
        
        
-       
-       bool irBieza();
-       
-    };
-
+       bool irBieza(){
+           if (lappuses > 300) {
+               
+           return true;
+           
+           }else{
+               
+           return false; 
+               
+           }       
+       }    
+};
 
 int main() {
       
       Gramata g1 ("Latvijas vesture", "Uldis Lipe", 20);
       
       g1.raditInfo();
+      
+      std::cout << std::boolalpha;
+      std::cout << "\n" << g1.irBieza();
+      
 
 
     return 0;
