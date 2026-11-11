@@ -38,11 +38,24 @@
 int main() {
       
       Gramata g1 ("Latvijas vesture", "Uldis Lipe", 20);
-      
-      g1.raditInfo();
+      Gramata g2 ("Namejs", "Arturs Jans", 300);
+      Gramata g3 ("Tautas balss", "Nezinams", 500);
       
       std::cout << std::boolalpha;
+      g1.raditInfo();
       std::cout << "\n" << "Ir bieza: "<< g1.irBieza();
+      std::cout << "\n";
+      std::cout << "\n";
+      
+      g2.raditInfo();
+      std::cout << "\n" << "Ir bieza: "<< g2.irBieza();
+      std::cout << "\n";
+      std::cout << "\n";
+      
+      g3.raditInfo();
+      std::cout << "\n" << "Ir bieza: "<< g3.irBieza();
+      std::cout << "\n";
+      std::cout << "\n";
       
 
 
